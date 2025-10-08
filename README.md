@@ -18,6 +18,7 @@ A clean, modern portfolio website built with Next.js and Tailwind CSS, featuring
 
 ## 📦 Getting Started
 
+```bash
 # Clone the repository
 git clone https://github.com/adiqa/adi-portfolio.git
 
@@ -26,7 +27,7 @@ npm install
 
 # Run development server
 npm run dev
-
+```
 
 Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
 
