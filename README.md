@@ -15,13 +15,12 @@ A clean, modern portfolio website built with Next.js and Tailwind CSS, featuring
 - [Next.js](https://nextjs.org/) - React framework
 - [TypeScript](https://www.typescriptlang.org/) - Type safety
 - [Tailwind CSS](https://tailwindcss.com/) - Styling
-- [v0.dev](https://v0.dev/) - AI-powered development
 
 ## 📦 Getting Started
 
 \`\`\`bash
 # Clone the repository
-git clone https://github.com/felixmacaspac/v0-minimalist-portfolio.git
+git clone https://github.com/adiqa/adi-portfolio.git
 
 # Install dependencies
 npm install
@@ -46,4 +45,3 @@ Open source and available under the [MIT License](LICENSE).
 
 ---
 
-**Built with ❤️ using [v0.dev](https://v0.dev) by Felix Macaspac**
