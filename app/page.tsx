@@ -92,10 +92,10 @@ export default function Home() {
                 <div className="text-sm text-muted-foreground font-mono">CURRENTLY</div>
                 <div className="space-y-2">
                   <div className="text-foreground">QA Senior Automation Engineer</div>
-                  <div className="text-muted-foreground">part-time @ Mukuru</div>
-                  <div className="text-xs text-muted-foreground">2020 — Present</div>
-                  <div className="text-muted-foreground">part-time @ Move the Chain</div>
-                  <div className="text-xs text-muted-foreground">2021 — Present</div>
+                  <div className="text-muted-foreground">full-time @ Move the Chain</div>
+                  <div className="text-xs text-muted-foreground">2021 — Present (4 years)</div>
+                  <div className="text-muted-foreground">full-time @ Mukuru</div>
+                  <div className="text-xs text-muted-foreground">2017 — 2022 (5 years)</div>
                 </div>
               </div>
 
@@ -124,7 +124,7 @@ export default function Home() {
           <div className="space-y-12 sm:space-y-16">
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
               <h2 className="text-3xl sm:text-4xl font-light">Selected Work</h2>
-              <div className="text-sm text-muted-foreground font-mono">2020 — 2025</div>
+              <div className="text-sm text-muted-foreground font-mono">2014 — 2025</div>
             </div>
 
             <div className="space-y-8 sm:space-y-12">
@@ -138,7 +138,7 @@ export default function Home() {
                   tech: ["Cypress", "Playwright", "MySQL", "TypeScript"],
                 },
                 {
-                  year: "2020 - ongoing",
+                  year: "2017 - 2022",
                   role: "QA Senior Engineer",
                   company: "Mukuru",
                   description: "Senior QA Engineer in largest african fin-tech company.",
@@ -211,7 +211,7 @@ export default function Home() {
                 {
                   title: "Microsoft Technology Associate for Software Development Fundamentals",
                   issuer: "Microsoft",
-                  date: "Nov 2024",
+                  date: "Jan 2017",
                   credentialId: "snh2-XLJu",
                   description: "Assessed and validated core knowledge in areas like general software development, core programming concepts, object-oriented programming, web and desktop applications, and databases.",
                   type: "licence",
