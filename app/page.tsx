@@ -205,7 +205,8 @@ export default function Home() {
                   date: "Nov 2019",
                   credentialId: "19-CTFL-166990-12",
                   description: "Foundation-level understanding of software testing principles and methodologies.",
-                  type: "certification"
+                  type: "certification",
+                  url: "https://scr.istqb.org/"
                 },
                 {
                   title: "Microsoft Technology Associate for Software Development Fundamentals",
@@ -213,7 +214,8 @@ export default function Home() {
                   date: "Nov 2024",
                   credentialId: "snh2-XLJu",
                   description: "Assessed and validated core knowledge in areas like general software development, core programming concepts, object-oriented programming, web and desktop applications, and databases.",
-                  type: "licence"
+                  type: "licence",
+                  url: "https://learn.microsoft.com/en-us/certifications/mta-software-development-fundamentals"
                 },
                 // {
                 //   title: "React Developer of the Year",
@@ -262,7 +264,12 @@ export default function Home() {
                       {item.description}
                     </p>
 
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300">
+                    <Link 
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300"
+                    >
                       <span>View credential</span>
                       <svg
                         className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300"
@@ -277,7 +284,7 @@ export default function Home() {
                           d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                         />
                       </svg>
-                    </div>
+                    </Link>
                   </div>
                 </article>
               ))}
