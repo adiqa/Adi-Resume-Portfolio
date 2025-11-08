@@ -56,7 +56,7 @@ export default function Home() {
       <main className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-16">
         <header
           id="intro"
-          ref={(el) => (sectionsRef.current[0] = el)}
+          ref={(el) => { sectionsRef.current[0] = el }}
           className="min-h-screen flex items-center opacity-0"
         >
           <div className="grid lg:grid-cols-5 gap-12 sm:gap-16 w-full">
@@ -72,7 +72,7 @@ export default function Home() {
 
               <div className="space-y-6 max-w-md">
                 <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-                  Experienced QA Engineer with a passion for testing and ensuring the
+                  Experienced Senior QA Engineer with a passion for testing and ensuring the
                   <span className="text-foreground"> quality </span>
                    of
                   <span className="text-foreground"> software products</span>.
@@ -91,18 +91,26 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="text-sm text-muted-foreground font-mono">CURRENTLY</div>
                 <div className="space-y-2">
-                  <div className="text-foreground">QA Senior Automation Engineer</div>
-                  <div className="text-muted-foreground">full-time @ Move the Chain</div>
+                  <div className="text-foreground">Senior QA Automation Engineer</div>
+                  <div className="text-muted-foreground">full-time @{" "}
+                    <Link 
+                      href="https://movethechain.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline hover:text-foreground transition-colors duration-300"
+                    >
+                      Move the Chain
+                    </Link>
+
+                  </div>
                   <div className="text-xs text-muted-foreground">2021 — Present (4 years)</div>
-                  <div className="text-muted-foreground">full-time @ Mukuru</div>
-                  <div className="text-xs text-muted-foreground">2017 — 2022 (5 years)</div>
                 </div>
               </div>
 
               <div className="space-y-4">
                 <div className="text-sm text-muted-foreground font-mono">FOCUS</div>
                 <div className="flex flex-wrap gap-2">
-                  {["Cypress", "Playwright", ,"Codeception", "TypeScript", "Javascript", "PHP", "MySQL"].map((skill) => (
+                  {["Cypress", "Playwright", "Codeception", "TypeScript", "Javascript", "PHP", "MySQL"].map((skill) => (
                     <span
                       key={skill}
                       className="px-3 py-1 text-xs border border-border rounded-full hover:border-muted-foreground/50 transition-colors duration-300"
@@ -118,7 +126,7 @@ export default function Home() {
 
         <section
           id="work"
-          ref={(el) => (sectionsRef.current[1] = el)}
+          ref={(el) => { sectionsRef.current[1] = el }}
           className="pt-6 pb-12 sm:pt-8 sm:pb-16 opacity-0"
         >
           <div className="space-y-12 sm:space-y-16">
@@ -131,24 +139,27 @@ export default function Home() {
               {[
                 {
                   year: "2021 - Ongoing",
-                  role: "QA Automation Engineer",
+                  role: "Senior QA Automation Engineer",
                   company: "Move the Chain",
+                  url: "https://movethechain.com",
                   description: "Helping organizations keep their employees engaged, informed and connected.",
                   responsibility: "Building and maintaining the QA automation framework, ensuring that the platform is tested and working as expected.",
                   tech: ["Cypress", "Playwright", "MySQL", "TypeScript"],
                 },
                 {
                   year: "2017 - 2022",
-                  role: "QA Senior Engineer",
+                  role: "Senior QA Engineer",
+                  url: "https://mukuru.com",
                   company: "Mukuru",
                   description: "Senior QA Engineer in largest african fin-tech company.",
-                  responsibility: "Maintaining automated testing framework, working with externalpartners, and ensuring that millions of transactions are processed seamlessly.",
+                  responsibility: "Maintaining automated testing framework, working with external partners, and ensuring that millions of transactions are processed seamlessly.",
                   tech: ["Codeception", "PHP", "Javascript"],
                 },
                 {
                   year: "2014-2016",
                   role: "System Administrator",
                   company: "School of Economics and Business",
+                  url: "https://www.efsa.unsa.ba/ef/en",
                   description: "Ensuring all kinds of IT systems are working as expected.",
                   responsibility: "Maintenance of IT systems, infrastructure, and network.",
                   tech: ["MySQL", "Javascript"],
@@ -167,7 +178,18 @@ export default function Home() {
                   <div className="lg:col-span-6 space-y-3">
                     <div>
                       <h3 className="text-lg sm:text-xl font-medium">{job.role}</h3>
-                      <div className="text-muted-foreground">{job.company}</div>
+                      {job.url ? (
+                        <Link 
+                          href={job.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-muted-foreground hover:text-foreground underline transition-colors duration-300"
+                        >
+                          {job.company}
+                        </Link>
+                      ) : (
+                        <div className="text-muted-foreground">{job.company}</div>
+                      )}
                     </div>
                     <p className="text-muted-foreground leading-relaxed max-w-lg">{job.description}</p>
                     <p className="text-xs text-muted-foreground leading-relaxed max-w-lg">{job.responsibility}</p>
@@ -191,7 +213,7 @@ export default function Home() {
 
         <section
           id="certifications"
-          ref={(el) => (sectionsRef.current[2] = el)}
+          ref={(el) => { sectionsRef.current[2] = el }}
           className="py-12 sm:py-16 opacity-0"
         >
           <div className="space-y-12 sm:space-y-16">
@@ -294,7 +316,7 @@ export default function Home() {
 
         <section
           id="thoughts"
-          ref={(el) => (sectionsRef.current[3] = el)}
+          ref={(el) => { sectionsRef.current[3] = el }}
           className="min-h-screen py-20 sm:py-32 opacity-0"
         >
           <div className="space-y-12 sm:space-y-16">
@@ -377,7 +399,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="connect" ref={(el) => (sectionsRef.current[4] = el)} className="py-20 sm:py-32 opacity-0">
+        <section id="connect" ref={(el) => { sectionsRef.current[4] = el }} className="py-20 sm:py-32 opacity-0">
           <div className="grid lg:grid-cols-2 gap-12 sm:gap-16">
             <div className="space-y-6 sm:space-y-8">
               <h2 className="text-3xl sm:text-4xl font-light">Let's Connect</h2>
