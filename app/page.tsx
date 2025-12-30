@@ -53,6 +53,34 @@ export default function Home() {
         </div>
       </nav>
 
+      <button
+        onClick={toggleTheme}
+        className="fixed top-8 right-8 z-10 group p-3 rounded-lg border border-border hover:border-muted-foreground/50 transition-all duration-300 bg-background/80 backdrop-blur-sm"
+        aria-label="Toggle theme"
+      >
+        {isDark ? (
+          <svg
+            className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors duration-300"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fillRule="evenodd"
+              d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+              clipRule="evenodd"
+            />
+          </svg>
+        ) : (
+          <svg
+            className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors duration-300"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+          </svg>
+        )}
+      </button>
+
       <main className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-16">
         <header
           id="intro"
@@ -62,7 +90,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-5 gap-12 sm:gap-16 w-full">
             <div className="lg:col-span-3 space-y-6 sm:space-y-8">
               <div className="space-y-3 sm:space-y-2">
-                <div className="text-sm text-muted-foreground font-mono tracking-wider">PORTFOLIO / 2025</div>
+                <div className="text-sm text-muted-foreground font-mono tracking-wider">PORTFOLIO / 2026</div>
                 <h1 className="text-5xl sm:text-6xl lg:text-7xl font-light tracking-tight">
                   Adi
                   <br />
@@ -87,12 +115,12 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="lg:col-span-2 flex flex-col justify-end space-y-6 sm:space-y-8 mt-8 lg:mt-0">
+            {/* <div className="lg:col-span-2 flex flex-col justify-end space-y-6 sm:space-y-8 mt-8 lg:mt-0">
               <div className="space-y-4">
                 <div className="text-sm text-muted-foreground font-mono">CURRENTLY</div>
                 <div className="space-y-2">
-                  <div className="text-foreground">Senior QA Automation Engineer</div>
-                  <div className="text-muted-foreground">full-time @{" "}
+                  <div className="text-foreground">Open for work</div> */}
+                  {/* <div className="text-muted-foreground">freelancer @{" "}
                     <Link 
                       href="https://movethechain.com"
                       target="_blank"
@@ -102,9 +130,9 @@ export default function Home() {
                       Move the Chain
                     </Link>
 
-                  </div>
-                  <div className="text-xs text-muted-foreground">2021 — Present (4 years)</div>
-                </div>
+                  </div> */}
+                  {/* <div className="text-xs text-muted-foreground">2021 — Present (4 years)</div> */}
+                {/* </div>
               </div>
 
               <div className="space-y-4">
@@ -120,34 +148,25 @@ export default function Home() {
                   ))}
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </header>
 
         <section
           id="work"
           ref={(el) => { sectionsRef.current[1] = el }}
-          className="pt-6 pb-12 sm:pt-8 sm:pb-16 opacity-0"
+          className="pt-6 pb-16 sm:pt-8 sm:pb-20 opacity-0"
         >
           <div className="space-y-12 sm:space-y-16">
             <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
               <h2 className="text-3xl sm:text-4xl font-light">Selected Work</h2>
-              <div className="text-sm text-muted-foreground font-mono">2014 — 2025</div>
+              <div className="text-sm text-muted-foreground font-mono">2014 — 2026</div>
             </div>
 
             <div className="space-y-8 sm:space-y-12">
               {[
                 {
-                  year: "2021 - Ongoing",
-                  role: "Senior QA Automation Engineer",
-                  company: "Move the Chain",
-                  url: "https://movethechain.com",
-                  description: "Helping organizations keep their employees engaged, informed and connected.",
-                  responsibility: "Building and maintaining the QA automation framework, ensuring that the platform is tested and working as expected.",
-                  tech: ["Cypress", "Playwright", "MySQL", "TypeScript"],
-                },
-                {
-                  year: "2017 - 2022",
+                  year: "2020 - ongoing",
                   role: "Senior QA Engineer",
                   url: "https://mukuru.com",
                   company: "Mukuru",
@@ -156,7 +175,16 @@ export default function Home() {
                   tech: ["Codeception", "PHP", "Javascript"],
                 },
                 {
-                  year: "2014-2016",
+                  year: "2021 - 2025",
+                  role: "QA Automation Engineer",
+                  company: "Move the Chain",
+                  url: "https://movethechain.com",
+                  description: "Helping organizations keep their employees engaged, informed and connected.",
+                  responsibility: "Building and maintaining the QA automation framework, ensuring that the platform is tested and working as expected.",
+                  tech: ["Cypress", "Playwright", "MySQL", "TypeScript", "Javascript"],
+                },
+                {
+                  year: "2014 - 2016",
                   role: "System Administrator",
                   company: "School of Economics and Business",
                   url: "https://www.efsa.unsa.ba/ef/en",
@@ -195,7 +223,7 @@ export default function Home() {
                     <p className="text-xs text-muted-foreground leading-relaxed max-w-lg">{job.responsibility}</p>
                   </div>
 
-                  <div className="lg:col-span-4 flex flex-wrap gap-2 lg:justify-end mt-2 lg:mt-0">
+                  <div className="lg:col-span-4 flex flex-wrap gap-x-2 gap-y-[2px] lg:justify-end mt-2 lg:mt-0">
                     {job.tech.map((tech) => (
                       <span
                         key={tech}
@@ -214,7 +242,7 @@ export default function Home() {
         <section
           id="certifications"
           ref={(el) => { sectionsRef.current[2] = el }}
-          className="py-12 sm:py-16 opacity-0"
+          className="pt-12 pb-16 sm:pt-16 sm:pb-20 opacity-0"
         >
           <div className="space-y-12 sm:space-y-16">
             <h2 className="text-3xl sm:text-4xl font-light">Certifications & Licences</h2>
@@ -317,7 +345,7 @@ export default function Home() {
         <section
           id="thoughts"
           ref={(el) => { sectionsRef.current[3] = el }}
-          className="min-h-screen py-20 sm:py-32 opacity-0"
+          className="pt-14 pb-18 sm:pt-18 sm:pb-22 opacity-0"
         >
           <div className="space-y-12 sm:space-y-16">
             <h2 className="text-3xl sm:text-4xl font-light">Honours and Awards</h2>
@@ -399,7 +427,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="connect" ref={(el) => { sectionsRef.current[4] = el }} className="py-20 sm:py-32 opacity-0">
+        <section id="connect" ref={(el) => { sectionsRef.current[4] = el }} className="pt-14 pb-18 sm:pt-18 sm:pb-22 opacity-0">
           <div className="grid lg:grid-cols-2 gap-12 sm:gap-16">
             <div className="space-y-6 sm:space-y-8">
               <h2 className="text-3xl sm:text-4xl font-light">Let's Connect</h2>
@@ -429,7 +457,7 @@ export default function Home() {
             </div>
 
             <div className="space-y-6 sm:space-y-8">
-              <div className="text-sm text-muted-foreground font-mono">ELSEWHERE</div>
+              <div className="text-sm text-muted-foreground font-mono">FIND ME ON</div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
@@ -440,6 +468,8 @@ export default function Home() {
                   <Link
                     key={social.name}
                     href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group p-4 border border-border rounded-lg hover:border-muted-foreground/50 transition-all duration-300 hover:shadow-sm"
                   >
                     <div className="space-y-2">
@@ -460,52 +490,6 @@ export default function Home() {
             <div className="space-y-2">
               {/* <div className="text-sm text-muted-foreground">© 2025 Felix Macaspac. All rights reserved.</div>
               <div className="text-xs text-muted-foreground">Built with v0.dev by Felix Macaspac</div> */}
-            </div>
-
-            <div className="flex items-center gap-4">
-              <button
-                onClick={toggleTheme}
-                className="group p-3 rounded-lg border border-border hover:border-muted-foreground/50 transition-all duration-300"
-                aria-label="Toggle theme"
-              >
-                {isDark ? (
-                  <svg
-                    className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors duration-300"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                ) : (
-                  <svg
-                    className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors duration-300"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                  >
-                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-                  </svg>
-                )}
-              </button>
-
-              {/* <button className="group p-3 rounded-lg border border-border hover:border-muted-foreground/50 transition-all duration-300">
-                <svg
-                  className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors duration-300"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-                  />
-                </svg>
-              </button> */}
             </div>
           </div>
         </footer>
