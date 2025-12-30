@@ -190,7 +190,7 @@ export default function Home() {
                   url: "https://www.efsa.unsa.ba/ef/en",
                   description: "Ensuring all kinds of IT systems are working as expected.",
                   responsibility: "Maintenance of IT systems, infrastructure, and network.",
-                  tech: ["MySQL", "Javascript"],
+                  tech: ["MySQL", "Linux", "Bash"],
                 },
               ].map((job, index) => (
                 <div
