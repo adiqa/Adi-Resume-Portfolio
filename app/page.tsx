@@ -462,7 +462,7 @@ export default function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
                   { name: "GitHub", handle: "@adiqa", url: "https://github.com/adiqa" },
-                  { name: "X", handle: "@PixelRider1337", url: "https://x.com/PixelRider1337" },
+                  { name: "X", handle: "@AdiKadic91", url: "https://x.com/AdiKadic91" },
                   { name: "LinkedIn", handle: "adikadic", url: "https://www.linkedin.com/in/adikadic/" },
                 ].map((social) => (
                   <Link
