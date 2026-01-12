@@ -31,6 +31,16 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
 
+## 🏁 How it looks?
+
+Black theme:
+
+<img width="3600" height="8002" alt="port-1" src="https://github.com/user-attachments/assets/c088bf54-28c4-4f4a-86da-cc346fa9469b" />
+
+White theme:
+
+<img width="3600" height="8002" alt="port-white" src="https://github.com/user-attachments/assets/d2f2fd78-7636-43f4-bec4-978116c5e373" />
+
 ## 🎨 Customization
 
 The portfolio is designed to be easily customizable:
