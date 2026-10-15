@@ -181,7 +181,7 @@ export default function Home() {
                   url: "https://movethechain.com",
                   description: "Sole automation engineer on a multi-tenant corporate social-impact platform.",
                   responsibility: "Architected a Cypress framework from scratch (10,000+ lines, 2,000+ assertions) that gates every deployment in GitHub Actions with functional, API, Lighthouse performance and accessibility, and DAST security checks, using weighted parallel sharding.",
-                  tech: ["Cypress", "TypeScript", "Javascript", "GitHub Actions", "Lighthouse", "TestRail"],
+                  tech: ["Cypress", "TypeScript", "Javascript", "GitHub Actions", "JMeter", "TestRail"],
                 },
                 {
                   year: "2014 - 2015",
